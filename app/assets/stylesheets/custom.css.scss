@@ -1,21 +1,140 @@
 $navbar-default-bg: #6C7A89;
-$navbar-default-link-color: #89C4F4;
+$navbar-default-link-color: #ECF0F1;
 $navbar-default-link-hover-color: #A2DED0;
 
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-#logo {
-  float: left;
-  font-size: 1.7em;
-  color: #ECECEC;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  font-weight: bold;
-}
+/*  ***************** 
+    *ELEMENT STYLING* 
+    *****************  */
 
-#logo:hover {
-  color: #A2DED0;
-  text-decoration: none;
-}
+  /*
+  svg:hover #bar-1 {
+    fill: #26A65B;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  svg:hover #bar-2 {
+    fill: #141414;
+    cursor: pointer;
+  }
+  
+  svg:hover #bar-3 {
+    fill: #DB0A5B;
+    cursor: pointer;
+  }
+  
+  svg:hover #bar-4 {
+    fill: #22A7F0;
+    cursor: pointer;
+    height: 100%;
+  }
+  */
+
+  footer {
+    border-top: 1px solid #5d6976;
+    margin-top: 50px;
+    padding-top: 5px;
+  }
+
+  footer a:hover {
+    color: #A2DED0;
+  }
+  
+  footer a:link {
+    color: #96281B;
+  }
+  
+  footer small {
+    float: left;
+  }
+  
+  footer ul {
+    float: right;
+    list-style: none;
+  }
+  
+  footer ul li {
+    float: left;
+    margin-left: 10px;
+  }
+
+
+/*  ************ 
+    *ID STYLING* 
+    ************  */
+
+  #logo {
+    color: #ECECEC;
+    float: left;
+    font-size: 1.7em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+  }
+  
+  #logo:hover {
+    color: #A2DED0;
+    text-decoration: none;
+  }
+
+
+/*  *************** 
+    *CLASS STYLING* 
+    ***************  */
+
+  .articles {
+    background-image: asset-url("news-paper.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #ECECEC;
+    font-size: 16px;
+    height: 400px;
+    text-shadow: 4px 4px 4px #141414;
+  }
+  
+  .articles a:hover {
+    color: #A2DED0;
+  }
+  
+  .articles a {
+    color: #ECECEC;
+  }
+  
+  .articles h1 {
+    color: #ECF0F1;
+    text-shadow: 4px 4px 4px #96281B;
+  }
+  
+  .articles td {
+    padding-right: 10px;
+  }
+  
+  .center a:link {
+    color: #141414;
+  }
+  
+  .center a:hover {
+    color: #A2DED0;
+  }
+  
+  .center h1 {
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px;
+  }
+  
+  .jumbotron {
+    background-image: asset-url("blog-photo.jpg");
+    color: #ECF0F1;
+    height: 300px;
+    text-align: center;
+  }
+  
+  .jumbotron h1 {
+    text-shadow: 4px 4px 4px #96281B;
+  }
+

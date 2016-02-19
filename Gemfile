@@ -8,6 +8,11 @@ gem 'rails', '4.2.4'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 
+#Embed an SVG in your Rails views and style them with CSS
+gem 'inline_svg'
+
+gem 'velocityjs-rails'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

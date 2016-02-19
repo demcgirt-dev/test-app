@@ -1,3 +1,19 @@
-<h1>This is the home page.</h1>
+<div class="jumbotron">
 
-<%= link_to 'Blog Posts', articles_path %> | <%= link_to 'About', about_path %>
+  <h1>D's Blog!</h1>
+
+  <%= link_to "Sign Up", "#", class: "btn btn-primary" %>
+
+</div>
+
+<div style="margin:50px 0 200px 0; padding:5px; width:450px; height:250px;">
+  
+  <!--               INSERT SVG AS AN IMAGE TAG 
+  <%= image_tag("executive-increase-sales-icon.svg", :alt => "icons", size:"500x300") %> -->
+  
+  <!--               INSERT SVG USING INLINE TAG FROM SVG GEM
+  <%= inline_svg("executive-increase-sales-icon.svg", class: '', nocomment: true) %> -->
+  
+  <%= render 'layouts/svg_icon' %>
+  
+</div>
