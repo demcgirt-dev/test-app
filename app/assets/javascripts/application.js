@@ -20,27 +20,22 @@
 
 $(function() {
   
-  $(".rect").hover(function() {
-    $("#bar1").delay(500)
-              .velocity({ fill: "#A2DED0", stroke: "#141414" })
-              .velocity({ x: "20", y: "50" });
+  $(".svg").click(function() {
     
-    $("#bar2").delay(1500)
-              .velocity({ fill: "#A2DED0", stroke: "#141414" });
-    
-    $("#bar3").delay(2500)
-              .velocity({ fill: "#A2DED0", stroke: "#141414" });
+    $("#bar1").velocity({ y: "42.2", height: 7}, [1, 1], 4000 );
               
-    $("#bar4").delay(3500)
-              .velocity({ fill: "#A2DED0", stroke: "#141414" });
+    $("#bar2").velocity({ y: "36.4", height: 17}, [1, 1], 4000 );
+            
+    $("#bar3").velocity({ y: "27.4", height: 32}, [1, 1], 4000 );
+              
+    $("#bar4").velocity({ y: "53.1", height: 6}, [1, 1], 4000 );
+    
+    $("#graph").delay(2000).velocity({ rotateZ: "4deg" }).velocity("reverse", {delay: 150})
+               .velocity({ rotateZ: "4deg" }).velocity("reverse", { delay: 150 });
+               
+    $("#Layer_1").velocity({ rotateZ: "360deg" }, 1500);
+               
   });
   
 });
 
-/*
-
-  $(".bar1")
-    .delay(500)
-    .velocity({ fill: "#A2DED0", stroke: "#141414" });
-
-*/
