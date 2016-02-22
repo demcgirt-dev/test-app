@@ -10,27 +10,11 @@ $navbar-default-link-hover-color: #A2DED0;
     *ELEMENT STYLING* 
     *****************  */
 
-  /*
+  /*  
   svg:hover #bar-1 {
     fill: #26A65B;
     height: 100%;
     cursor: pointer;
-  }
-  
-  svg:hover #bar-2 {
-    fill: #141414;
-    cursor: pointer;
-  }
-  
-  svg:hover #bar-3 {
-    fill: #DB0A5B;
-    cursor: pointer;
-  }
-  
-  svg:hover #bar-4 {
-    fill: #22A7F0;
-    cursor: pointer;
-    height: 100%;
   }
   */
 
@@ -96,12 +80,12 @@ $navbar-default-link-hover-color: #A2DED0;
     text-shadow: 4px 4px 4px #141414;
   }
   
-  .articles a:hover {
-    color: #A2DED0;
-  }
-  
   .articles a {
     color: #ECECEC;
+  }
+  
+  .articles a:hover {
+    color: #A2DED0;
   }
   
   .articles h1 {
@@ -113,12 +97,13 @@ $navbar-default-link-hover-color: #A2DED0;
     padding-right: 10px;
   }
   
-  .center a:link {
-    color: #141414;
-  }
-  
   .center a:hover {
     color: #A2DED0;
+  }
+  
+  
+  .center a:link {
+    color: #141414;
   }
   
   .center h1 {
@@ -137,4 +122,3 @@ $navbar-default-link-hover-color: #A2DED0;
   .jumbotron h1 {
     text-shadow: 4px 4px 4px #96281B;
   }
-
