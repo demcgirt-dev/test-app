@@ -10,14 +10,6 @@ $navbar-default-link-hover-color: #A2DED0;
     *ELEMENT STYLING* 
     *****************  */
 
-  /*  
-  svg:hover #bar-1 {
-    fill: #26A65B;
-    height: 100%;
-    cursor: pointer;
-  }
-  */
-
   footer {
     border-top: 1px solid #5d6976;
     margin-top: 50px;
@@ -69,7 +61,7 @@ $navbar-default-link-hover-color: #A2DED0;
 /*  *************** 
     *CLASS STYLING* 
     ***************  */
-
+    
   .articles {
     background-image: asset-url("news-paper.jpg");
     background-repeat: no-repeat;
@@ -101,7 +93,6 @@ $navbar-default-link-hover-color: #A2DED0;
     color: #A2DED0;
   }
   
-  
   .center a:link {
     color: #141414;
   }
@@ -121,4 +112,8 @@ $navbar-default-link-hover-color: #A2DED0;
   
   .jumbotron h1 {
     text-shadow: 4px 4px 4px #96281B;
+  }
+
+  .mw_svg {
+    max-height: 215px;
   }
