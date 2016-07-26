@@ -25,6 +25,7 @@
 $(function() {
 
   blink(); //Called by the page DOM
+  write();
 
   // function which animates the blinking effect of the image 
   function blink() {
@@ -33,6 +34,42 @@ $(function() {
               .delay(1000)
               .animate({ width:""}, 0, 0, blink); //blink param calls the func when animation completes
   }
+  
+  
+  
+  
+  
+  
+  
+  function write() {
+    $(".written-1").delay(2500).velocity({ fill: "#ff0000" });
+    $(".written-2").delay(2250).velocity({ fill: "#ff0000" }).velocity({x: 15});
+    //$(".written-2").velocity({ fill: "#ff0000" }, { x: 15, duration:1000 });
+    $(".written-3").delay(2000).velocity({ fill: "#ff0000" }).velocity({x: 25});
+    $(".written-4").delay(1750).velocity({ fill: "#ff0000" }).velocity({x: 35});
+    $(".written-5").delay(1500).velocity({ fill: "#ff0000" }).velocity({x: 45});
+    $(".written-6").delay(1250).velocity({ fill: "#ff0000" }).velocity({x: 60});
+    $(".written-7").delay(1000).velocity({ fill: "#ff0000" }).velocity({x: 70});
+    $(".written-8").delay(500).velocity({ fill: "#ff0000" }).velocity({x: 80});
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   /* --------------------------------------------------    
