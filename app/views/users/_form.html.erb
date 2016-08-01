@@ -1,0 +1,68 @@
+
+<% if @user.errors.any? %>
+  <h2>The following errors prevented article from being created.</h2>
+    
+  <% @user.errors.full_messages.each do |msg| %>
+    <ul>
+      <li><%= msg %></li>
+    </ul>
+  <% end %>
+    
+<% end %>
+
+<div class="row">
+  <div class="col-md-12">
+    
+    <%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+      <div class="form-group">
+        
+        <div class ="control-label col-md-2">
+          <%= f.label :username %><br/>
+        </div>
+        
+        <div class="col-md-6">
+          <%= f.text_field :username, class: "form-control", placeholder: "Enter Username", autofocus: true  %>
+        </div>
+        
+      </div>
+      
+      <div class="form-group">
+        
+        <div class ="control-label col-md-2">
+          <%= f.label :email %><br/>
+        </div>
+        
+        <div class="col-md-6">
+          <%= f.email_field :email, class: "form-control", placeholder: "Enter Email" %>
+        </div>
+        
+      </div>
+      
+      <div class="form-group">
+        
+        <div class ="control-label col-md-2">
+          <%= f.label :password %><br/>
+        </div>
+        
+        <div class="col-md-6">
+          <%= f.password_field :password, class: "form-control", placeholder: "Enter Password" %>
+        </div>
+        
+      </div>
+      
+      <div class="form-group">
+        
+        <div class="col-md-offset-2 col-md-2">
+          <%= f.submit(@user.new_record? ? "Sign Up" : "Update Account", class: "btn btn-primary") %>
+        </div>
+        
+      </div>
+      
+    <% end %>
+    
+    <div class="col-md-offset-4 col-md-3">
+      <%= link_to "[ Return to articles listing ]", articles_path %>
+    </div>
+    
+  </div>
+</div>
