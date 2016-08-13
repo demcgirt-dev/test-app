@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   get 'users/new'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -14,6 +16,10 @@ Rails.application.routes.draw do
   
   get 'signup', to: 'users#new'
   resources :users, except: [:new] # get all routes except new action, already created above
+  
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

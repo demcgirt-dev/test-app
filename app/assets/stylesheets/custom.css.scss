@@ -63,18 +63,17 @@ $navbar-default-link-hover-color: #A2DED0;
     ***************  */
     
   .articles {
-    /* background-image: asset-url("sage-section-2-photo.jpg"); */
-    background-color: #8E44AD;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    color: #ECECEC;
+    /* background-image: asset-url("sage-section-2-photo.jpg"); 
+    background-repeat: no-repeat; 
+    background-size: 100% 100%; */
+    color: #6C7A89;
     font-size: 16px;
     height: 400px;
-    text-shadow: 1px 1px 1px #E9D460;
   }
   
   .articles a {
-    color: #ECECEC;
+    color: #F22613;
+    font-weight: bold;
   }
   
   .articles a:hover {
@@ -82,8 +81,7 @@ $navbar-default-link-hover-color: #A2DED0;
   }
   
   .articles h1 {
-    color: #ECF0F1;
-    text-shadow: 2px 2px 2px #E08283;
+    color: #9A12B3;
   }
   
   .articles td {
