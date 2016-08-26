@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  
   before_action :set_article, only: [:edit, :update, :show, :destroy]
   
   # ------------------------------------------------------------
@@ -40,8 +41,8 @@ class ArticlesController < ApplicationController
     #render plain: params[:article].inspect
     @article = Article.new(article_params)
     
-    #ensures that an article has a user
-    @article.user = User.first
+    #assigns an article to the current user that is logged in
+    @article.user = current_user
     
     if @article.save
       flash[:notice] = "Article was successfully created"
