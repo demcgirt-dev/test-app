@@ -9,31 +9,34 @@ $navbar-default-link-hover-color: #A2DED0;
 /*  ***************** 
     *ELEMENT STYLING* 
     *****************  */
-
-  footer {
-    border-top: 1px solid #5d6976;
-    margin-top: 50px;
-    padding-top: 5px;
+    
+  td, th {
+    padding: 5px;
   }
 
-  footer a:hover {
+  .footer {
+    background-color: #4183D7;
+    padding: 25px 50px 20px;
+  }
+
+  .footer a:hover {
     color: #A2DED0;
   }
   
-  footer a:link {
-    color: #96281B;
+  .footer a {
+    color: #FFFFFF;
   }
   
-  footer small {
+  .footer small {
     float: left;
   }
   
-  footer ul {
+  .footer ul {
     float: right;
     list-style: none;
   }
   
-  footer ul li {
+  .footer ul li {
     float: left;
     margin-left: 10px;
   }
@@ -82,10 +85,6 @@ $navbar-default-link-hover-color: #A2DED0;
   
   .articles h1 {
     color: #59ABE3;
-  }
-  
-  .articles td {
-    padding-right: 10px;
   }
   
   .center a:hover {

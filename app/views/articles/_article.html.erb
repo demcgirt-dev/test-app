@@ -1,14 +1,15 @@
 <% obj.each do |article| %>
   <tr>
-    <td> <%= article.title %> </td>
-    <td style = "padding-left: 40px;"> <%= article.description %> </td>
-    <td> <%= @entry %></td>
+    <td width="25%"> <%= article.title %> </td>
+    <td width="50%"> <%= article.description %> </td>
     <!-- <td> <%= render plain: article.user.inspect %> </td> -->
     
     <% if logged_in? && current_user == article.user %>
-      <td style = "padding-left: 40px;"> <%= link_to 'Edit | ', edit_article_path(article) %></td>
-      <td> <%= link_to 'Show | ', article_path(article) %></td>
-      <td> <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?"} %></td>
+      <td width="25%"> 
+      <%= link_to 'Edit |', edit_article_path(article) %>
+      <%= link_to 'Show |', article_path(article) %>
+      <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?"} %>
+      </td>
     <% end %>
   </tr>
 <% end %>
