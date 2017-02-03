@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   
-  has_many :articles
+  has_many :articles, dependent: :destroy
   has_secure_password # bcrypt method
   
   before_save { self.email = email.downcase } # before email saves to database, downcase it

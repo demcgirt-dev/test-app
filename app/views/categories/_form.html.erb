@@ -1,0 +1,53 @@
+<% if @category.errors.any? %>
+  <div class="row" style="margin-bottom: 50px;">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="jumbotron error-msg">
+        <h2>The following errors prevented this category from being created:</h2>
+      
+        <% @category.errors.full_messages.each do |msg| %>
+          <ul style="text-align: left;">
+            <li style="padding: 5px;">
+              <span style="padding: 5px;" class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <%= msg %>
+            </li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<div class="row">
+  <div class="col-md-12">
+  
+    <%= form_for(@category, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+      <div class="form-group">
+        
+        <div class ="control-label col-md-2">
+          <%= f.label :name %><br/>
+        </div>
+        
+        <div class="col-md-6">
+          <%= f.text_field :name, class: "form-control", placeholder: "Category Name", autofocus: true  %>
+        </div>
+        
+      </div>
+      
+      <div class="form-group">
+        
+        <div class="col-md-offset-2 col-md-2">
+          <%= f.submit class: "btn btn-primary" %>
+        </div>
+        
+      </div>
+      
+    <% end %>
+    
+    <div class="col-md-offset-4 col-md-3">
+      <%= link_to "[ Return to categories listing ]", categories_path %>
+    </div>
+    
+  </div>
+</div>
+  
+

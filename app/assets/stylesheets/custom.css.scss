@@ -125,6 +125,11 @@ $navbar-default-link-hover-color: #A2DED0;
     padding: 10px;
   }
   
+  .error-msg {
+    background: none !important;
+    background-color: #d9534f !important;
+  }
+  
   .jumbotron {
     background-image: asset-url("blog-photo.jpg");
     color: #ECF0F1;
