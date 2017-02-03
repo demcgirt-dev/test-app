@@ -9,14 +9,26 @@ $navbar-default-link-hover-color: #A2DED0;
 /*  ***************** 
     *ELEMENT STYLING* 
     *****************  */
+  a {
+    color: #000000;
+  }
+  
+  a:hover {
+    color: #FFFFFF;
+  }
+  
+  a.delete_action {
+    color: #FF0000 !important;
+  }
     
   td, th {
     padding: 5px;
   }
-
+  
   .footer {
     background-color: #4183D7;
     padding: 25px 50px 20px;
+    margin-top: 50px;
   }
 
   .footer a:hover {
@@ -71,12 +83,24 @@ $navbar-default-link-hover-color: #A2DED0;
     background-size: 100% 100%; */
     color: #000000;
     font-size: 16px;
-    height: 400px;
+  }
+  
+  .articles .glyphicon {
+    padding: 6px;
   }
   
   .articles a {
-    color: #F22613;
+    color: #87D37C;
     font-weight: bold;
+  }
+  
+  .user-articles a {
+    color: #87D37C;
+    font-weight: bold;
+  }
+  
+  .user-articles .glyphicon {
+    padding: 6px;
   }
   
   .articles a:hover {
@@ -104,7 +128,7 @@ $navbar-default-link-hover-color: #A2DED0;
   .jumbotron {
     background-image: asset-url("blog-photo.jpg");
     color: #ECF0F1;
-    height: 275px;
+    max-height: 275px;
     text-align: center;
   }
   

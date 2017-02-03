@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   
-  before_action :set_user, only: [:edit, :update, :show]
+  before_action :set_user, only: [:edit, :update, :show, :destroy]
+  #before_action :require_same_user, only: [:edit, :update, :destroy]
   
   def index
     @users = User.all
@@ -8,6 +9,11 @@ class UsersController < ApplicationController
   
   def new
     @user = User.new
+    
+    if logged_in?
+      flash[:success] = "Please log out as current user before creating a new one."
+      redirect_to articles_path
+    end
   end
   
   def create
@@ -37,6 +43,19 @@ class UsersController < ApplicationController
   
   end
   
+  def destroy
+    if current_user == @user
+      session[:user_id] = nil
+      @user.destroy
+      flash[:notice] = "You have successfully deleted your account"
+      redirect_to login_path
+    else
+      @user.destroy
+      flash[:notice] = "User was successfully deleted"
+      redirect_to users_path
+    end
+  end
+  
   private
   
   def user_params
@@ -47,5 +66,12 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
   end
+  
+  # def require_same_user
+  #   if current_user != @user
+  #     flash[:danger] = "You can only manage your own user account"
+  #     redirect_to articles_path
+  #   end
+  # end
   
 end

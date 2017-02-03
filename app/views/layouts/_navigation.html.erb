@@ -12,7 +12,11 @@
         <span class="icon-bar"></span>
       </button>
       
-      <%= link_to "D's Blog", root_path, class: "navbar-brand", id: "logo" %>
+      <% if logged_in? %>
+        <%= link_to "D's Blog", articles_path, class: "navbar-brand", id: "logo" %>
+      <% else %>
+        <%= link_to "D's Blog", root_path, class: "navbar-brand", id: "logo" %>
+      <% end %>
       
     </div>
 

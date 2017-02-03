@@ -1,14 +1,10 @@
-<div class="articles">
-  <h1>Listing all articles</h1>
+<div class="row">
+  <div class="articles">
+    <h1>Listing all articles</h1>
+    <p><%= link_to "Create new article", new_article_path %></p>
 
-  <p><%= link_to "Create new article", new_article_path %></p>
-
-  <table>
-    <tr>
-      <th>Title</hr>
-      <th>Description</hr>
-    </tr>
-  
-    <%= render 'article', obj: @articles %>
-  </table>
+    <div class = "col-md-6 col-md-offset-3 center">
+      <%= render 'article', obj: @articles %>
+    </div>
+  </div>
 </div>

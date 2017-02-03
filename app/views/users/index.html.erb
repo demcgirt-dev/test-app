@@ -7,6 +7,7 @@
         <ul class="user-list">
           <li class="article-title"><%= link_to user.username, user_path(user) %></li>
           <li><small><%= pluralize(user.articles.count, "article") if user.articles %></small></li>
+          <li><span class="label label-danger"><%= link_to 'Delete', user_path(user), method: :delete, data: {confirm: "Are you sure you want to delete this user?"} %></span>
         </ul>
       </div>
     </div>
