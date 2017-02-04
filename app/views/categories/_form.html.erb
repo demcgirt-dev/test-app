@@ -2,7 +2,7 @@
   <div class="row" style="margin-bottom: 50px;">
     <div class="col-md-8 col-md-offset-2">
       <div class="jumbotron error-msg">
-        <h2>The following errors prevented this category from being created:</h2>
+        <h3>The following errors prevented this category from being created:</h3>
       
         <% @category.errors.full_messages.each do |msg| %>
           <ul style="text-align: left;">
@@ -44,7 +44,8 @@
     <% end %>
     
     <div class="col-md-offset-4 col-md-3">
-      <%= link_to "[ Return to categories listing ]", categories_path %>
+      <span class="glyphicon glyphicon-tags" aria-hidden="true" style="padding: 10px;"></span>
+      <%= link_to "Return to categories listing", categories_path %>
     </div>
     
   </div>

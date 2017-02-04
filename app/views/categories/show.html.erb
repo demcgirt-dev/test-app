@@ -1,0 +1,6 @@
+<h3 style="text-align: center;"><%= "Category: " + @category.name %></h3>
+<div class="row">
+  <div class="col-md-offset-3 col-md-6">
+    <%= render 'articles/article', obj: @category_articles %>
+  </div>
+</div>

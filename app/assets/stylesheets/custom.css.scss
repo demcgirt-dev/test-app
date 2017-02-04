@@ -9,12 +9,13 @@ $navbar-default-link-hover-color: #A2DED0;
 /*  ***************** 
     *ELEMENT STYLING* 
     *****************  */
-  a {
+    
+  small {
     color: #000000;
   }
   
-  a:hover {
-    color: #FFFFFF;
+  a {
+    color: #000000;
   }
   
   a.delete_action {
@@ -94,9 +95,21 @@ $navbar-default-link-hover-color: #A2DED0;
     font-weight: bold;
   }
   
+  .articles .panel-body {
+    background-color: #59ABE3;
+  }
+  
+  .articles .panel-body a {
+    color: #FFFFFF;
+  }
+  
   .user-articles a {
     color: #87D37C;
     font-weight: bold;
+  }
+  
+  .user-articles .panel-body {
+    background-color: #ECECEC;
   }
   
   .user-articles .glyphicon {
@@ -107,16 +120,8 @@ $navbar-default-link-hover-color: #A2DED0;
     color: #59ABE3;
   }
   
-  .articles h1 {
-    color: #59ABE3;
-  }
-  
   .center a:hover {
     color: #A2DED0;
-  }
-  
-  .center a:link {
-    color: #141414;
   }
   
   .center h1 {

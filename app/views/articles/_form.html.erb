@@ -1,12 +1,20 @@
 <% if @article.errors.any? %>
-  <h2>The following errors prevented article from being created.</h2>
-    
-  <% @article.errors.full_messages.each do |msg| %>
-    <ul>
-      <li><%= msg %></li>
-    </ul>
-  <% end %>
-    
+  <div class="row" style="margin-bottom: 50px;">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="jumbotron error-msg">
+        <h3>The following errors prevented this article from being created:</h3>
+      
+        <% @article.errors.full_messages.each do |msg| %>
+          <ul style="text-align: left;">
+            <li style="padding: 5px;">
+              <span style="padding: 5px;" class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <%= msg %>
+            </li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
 <% end %>
 
 <div class="row">
@@ -38,6 +46,16 @@
       </div>
       
       <div class="form-group">
+        <div class="row">
+          <div class ="col-sm-offset-2 col-sm-8">
+            <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+              <% cb.label(class: "checkbox-inline input_checkbox") { cb.check_box(class: "checkbox") + cb.text } %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-group">
         
         <div class="col-md-offset-2 col-md-2">
           <%= f.submit class: "btn btn-primary" %>
@@ -48,10 +66,9 @@
     <% end %>
     
     <div class="col-md-offset-4 col-md-3">
-      <%= link_to "[ Return to articles listing ]", articles_path %>
+      <span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="padding: 10px;"></span>
+      <%= link_to "Return to articles listing", articles_path %>
     </div>
     
   </div>
 </div>
-  
-

@@ -1,17 +1,25 @@
-
 <% if @user.errors.any? %>
-  <h2>The following errors prevented article from being created.</h2>
-    
-  <% @user.errors.full_messages.each do |msg| %>
-    <ul>
-      <li><%= msg %></li>
-    </ul>
-  <% end %>
-    
+  <div class="row" style="margin-bottom: 50px;">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="jumbotron error-msg">
+        <h3>The following errors prevented this user from being created:</h3>
+      
+        <% @user.errors.full_messages.each do |msg| %>
+          <ul style="text-align: left;">
+            <li style="padding: 5px;">
+              <span style="padding: 5px;" class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <%= msg %>
+            </li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
 <% end %>
 
 <div class="row">
   <div class="col-md-12">
+    <div class="col-md-10 col-md-offset-1">
     
     <%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
       <div class="form-group">
@@ -59,9 +67,11 @@
       </div>
       
     <% end %>
+    </div>
     
     <div class="col-md-offset-4 col-md-3">
-      <%= link_to "[ Return to articles listing ]", articles_path %>
+      <span class="glyphicon glyphicon-user" aria-hidden="true" style="padding: 10px;"></span> 
+      <%= link_to "Return to User Login", login_path %>
     </div>
     
   </div>

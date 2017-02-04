@@ -9,11 +9,6 @@ class UsersController < ApplicationController
   
   def new
     @user = User.new
-    
-    if logged_in?
-      flash[:success] = "Please log out as current user before creating a new one."
-      redirect_to articles_path
-    end
   end
   
   def create
