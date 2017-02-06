@@ -53,7 +53,11 @@ $navbar-default-link-hover-color: #A2DED0;
     float: left;
     margin-left: 10px;
   }
-
+  
+  .category-title a {
+    font-weight: bold;
+    color: #FFFFFF;
+  }
 
 /*  ************ 
     *ID STYLING* 
@@ -96,7 +100,13 @@ $navbar-default-link-hover-color: #A2DED0;
   }
   
   .articles .panel-body {
-    background-color: #59ABE3;
+    background-color: #59ABE3 !important;
+    min-height: 181px;
+    max-height: 200px;
+  }
+  
+  .articles .panel-default {
+    max-width: 450px;
   }
   
   .articles .panel-body a {

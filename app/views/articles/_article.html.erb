@@ -1,6 +1,8 @@
 <% obj.each do |article| %>
+  <div class="col-xs-12 col-md-6">
+
   <div class="panel panel-default">
-    <div class="panel-body">
+    <div class="panel-body" style="background-color: #ECECEC;">
       <div class="row">
         <div class="col-md-12"><p style="text-align: center;"><span style="font-weight: bold;">Title:</span> <%= article.title %></p></div>
         <div class="col-md-12"><p style="text-align: center;"><span style="font-weight: bold;">Description:</span> <%= truncate(article.description, length: 30) %></p></div>
@@ -26,5 +28,7 @@
         <% end %>
       </div>
     </div>
+  </div>
+  
   </div>
 <% end %>

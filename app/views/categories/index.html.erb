@@ -4,9 +4,12 @@
   <% @categories.each do |category| %>
     <ul class="listing">
       <div class="row">
-        <div class="well col-md-4 col-md-offset-4" style="background-color: #59ABE3;">
-          <li class="article-title">
+        <div class="well col-xs-offset-3 col-xs-6 col-md-4 col-md-offset-4" style="background-color: #59ABE3;">
+          <li class="category-title">
             <%= link_to "#{category.name}", category_path(category) %>
+          </li>
+          <li class="category-title">
+            <%= pluralize(category.articles.count, "article") if category.articles %>
           </li>
         </div>
       </div>
